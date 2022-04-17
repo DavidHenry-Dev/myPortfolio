@@ -1,10 +1,9 @@
 /************ TO DO 
-1. Remove fixed heights/width and readjust layout starting at larger screen (my monitor)
-2. Use flex wrap on anything that can be stacked vertically instead of media queries
-3. Poasibly use more rem/ems for width of images/sections/articles etc etc
-4. Give functionality to  -view my work button to auto scroll to work section
-5. Move media queries to be under the appropaites section that they we're needed for. Helps with readability
-6. Create mobile nav/header
+4. Give functionality and animation to site with JS
+5. Move media queries to be under the appropaites section that they we're needed for. Helps me with readability
+6. Create mobile nav/header with hamburger menu etc etc
+7. Scale site from mobile to larger screens and add media   queries when necassary
+8. Replace project placeholders with real projects
 
 *******************/
 
@@ -12,7 +11,7 @@
 
 
 
-/* global styles & utility classes */
+/******** global styles & utility classes **********/
 :root {
     --main-color: #fffffe;
     --sub-color: #0d0d0d;
@@ -26,14 +25,19 @@
     font-size: 10px;
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 body {
     background: var(--main-color);
     color: var(--sub2-color);
-    /* font-family: 'Poppins', sans-serif; */
     font-family: 'Segoe UI', sans-serif;
+}
+.container {
+    padding: 0 1rem;
+    margin: auto;
+    width: 100%;
+    max-width: 450px;
 }
 
 li, a {
@@ -45,10 +49,9 @@ li, a {
     display: none;
 }
 
-/* header and Nav */
+/************ header and Nav ***************/
 
 nav {
-    height: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,21 +59,23 @@ nav {
 }
 
 #myLogo {
-    font-size: 2.8rem;
+    margin: 0;
+    padding: 0 1rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    padding-left: 2rem;
     color: var(--accent3-color);
 }
 
 nav ul {
+    margin: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1.5rem 0;
-    flex-basis: 35%;
 }
 
 nav li a{
+    padding: 0 1rem;
     font-size: 1.6rem;
     color: var(--accent2-color);
     box-shadow: inset 0 0 0 0 var(--accent3-color);
@@ -83,107 +88,70 @@ nav li a:hover {
     box-shadow: inset 200px 0 0 0 var(--accent3-color);
   }
 
-
-  @media only screen and (max-width : 480px) {
-
-        nav {
-            
-            justify-content: space-evenly;
-        }
-        nav ul {
-            display: flex;
-            justify-content: space-evenly;
-            flex-basis: 100%;
-        }
-
-        nav li a{
-            font-size: 2rem;
-        }
-        #myLogo {
-            display: none;
-        }
-  }
-
-  /* Main and hero*/
- main > * {
-     padding: 1rem 0;
- } 
+  /********* Main and hero ***********/
 
 main {
     display: flex;
+    justify-content: center;
+}
+
+.hero > * {
+    margin: 1.6rem auto;
+} 
+ 
+.hero {
+    display: flex;
     flex-direction: column;
     align-items:center;
-    justify-content: space-around;
-    gap: 1.5rem;
-    margin: 9rem 0;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 5rem 0;
 }
 
-main > div {
-    animation: slideInFromLeft .8s ease;
-}
-
-main > i {
+.hero > i {
     font-size: 6rem;
     color: var(--accent-color);
 }
 
-main h1 {
-  
-    font-size: 6rem;
+.hero h1 {
+    font-size: 4rem;
     color: var(--sub-color);
 }
 
-main h1 > span {
+.hero h1 > span {
     color: var(--accent-color);
-    font-size: 6rem;
+    font-size: 4rem;
 }
 
-main p {
-    font-size: 2.6rem;
+.hero p {
+    font-size: 2.4rem;
     color: var(--accent2-color);
-    line-height: 1.6;
-    margin: 0; 
+    line-height: 1.5;
 }
-main p span {
-    font-size: 2.6rem;
+
+.hero p span {
+    font-size: 2.4rem;
     color: var(--sub-color);
-    border-bottom: 3px solid var(--accent3-color);
-    line-height: 1.6;
+    border-bottom: 2px solid var(--accent3-color);
 }
 
-main button {
-    height: 40px;
-    width: 150px;
-    font-size: 1.4rem;
-    font-weight: 500;
-    background: var(--main-color);
-    border: 2px solid var(--sub-color);
-    color: var(--sub-color);
-}
-
-main button i {
-    padding-left: 7px;
-    color: var(--accent3-color);
-}
-
-.flexDiv {
-    margin: 2rem 0;
+.socialLinks {
     width:50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.flexDiv ul {
-    padding-left: 0;
-    width: 100%;
+.socialLinks ul {
+    margin: 2rem auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.flexDiv ul i {
-    font-size: 4rem;
+.socialLinks ul i {
+    padding: 0 3rem;
+    font-size: 3.2rem;
     color: var(--accent2-color);   
 }
 
@@ -192,7 +160,6 @@ main button i {
 }
 
 .fa-solid {
-    margin-top: 2rem;
     color: var(--accent3-color);
     font-size: 3rem;
 }
@@ -203,108 +170,86 @@ main button i {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 6rem 4rem;
-    row-gap: 1rem;
     background: var(--accent2-color);
-    color:var(--main-color);
-   
+    color:var(--main-color); 
+}
+
+#aboutMe .container > * {
+    margin: 4rem auto;
 }
 
 #aboutMe > div {
-    flex-basis: 50%;
+    text-align: center;
 }
 
 #aboutMe h2 {
-    font-size: 4rem;
-    margin: 0;
+    font-size: 3rem;
 }
 
 #aboutMe p {
-    font-size:2.4rem;
-    line-height: 1.8;
+    font-size:2rem;
+    line-height: 1.5;
 }
 
 #aboutMe img {
-    height:350px;
-    width: 225px;
+    height:35rem;
+    width: 23rem;
     border-radius: 5px;
-    animation: slideInFromRight .8s ease;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
-}
-
-@media only screen and (max-width : 480px) {
-    #aboutMe {
-        flex-direction: column-reverse;
-    }
-    #aboutMe img {
-        height: 220px;
-        width: 180px;
-    }
 }
 
 /***** Projects and work section  *****/
 
-
 #myProjects {
- padding: 8rem, 4rem;
+ padding:5rem 0 0;
  display: flex;
  justify-content: space-evenly;
- align-items: flex-start;
+ align-items: center;
  flex-wrap: wrap;
- flex-basis: 50%;
  background: var(--main-color);
  color: var(--sub-color);
 }
 
 #myProjects h2 {
- margin: 3rem 0;
- padding: 20px 0 0 0;
  text-align: center;
- font-size: 4rem;
+ font-size: 3rem;
  color: var(--sub-color);
 }
 
 #myProjects h2 span {
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--accent-color);
-}
-
-
-#myProjects article {
- display: flex;
- justify-content: space-evenly;
- align-items: left;
- flex-wrap: wrap;
- width: 100%;
- margin: 5rem 0;
- 
-}
-
-article img {
-    height: 35rem;
-    width: 50rem;
-    border: 3px solid var(--sub2-color);
 }
 
 .projectInfo {
     display: flex;
+    align-items: left;
     flex-direction: column;
-    justify-content: left;
-    row-gap: 1rem;
-    flex-basis: 40%;
+    margin: 5rem auto;
     background: var(--main-color);
     color: var(--accent2-color);
 }
 
-h3 {
-    font-size: 2rem;
+.projectInfo > * {
+    margin: 1.2rem auto;
+}
+
+.projectInfo img {
+    height: 20rem;
+    width: 30rem;
+    border: 3px solid var(--sub2-color);
+}
+
+.projectInfo h3 {
+    font-size: 2.2rem;
     font-weight: 600;    
 }
 
-#myProjects p {
-    text-align: left;
-    font-size: 1.5rem;
-    line-height: 1.7;
+.projectInfo p {
+    margin: 1rem 0;
+    
+    font-size: 2rem;
+    line-height: 1.3;
 }
 
 #myProjects ul {
@@ -313,7 +258,7 @@ h3 {
 
 #myProjects ul i {
     font-size: 3rem;
-    margin-right: 2rem;
+    padding: 0 1rem;
 }
 
 .fa-js {
@@ -327,73 +272,75 @@ h3 {
     color: #e34f26;
 }
 
+#myProjects button {
+    width: 100px;
+    height: 40px;
+    background: var(--main-color);
+    color: var(--accent2-color);
+    border: 1.5px solid var(--accent3-color);
+    border-radius: .5rem;
+    font-size: 1.6rem;
+}
+
 /****** contact info section ******/
 
 #contactInfo {
-    padding: 3rem 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    padding: 3rem 1rem;
     background: var(--sub2-color);
     color: var(--sub-color);
-    
+}
+
+#contactInfo .container > * {
+    margin: 2rem auto;
 }
 
 #contactInfo h2{
-    font-size: 4rem;
-    margin-bottom: 10px;;
+    font-size: 3rem;
+    text-align: center;
 }
 
 #contactInfo p {
     font-size: 2rem;
-    padding: 0 40px;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 form input{
-    margin-top: 6px;
-    height:20px;
-    width: 300px;
+    margin-top: 1rem;
+    height: 2rem;
+    width: 100%;
     background-color: var(--main-color);
-}
-
-form textarea {
-    margin-top: 6px;
-    color: var(--sub-color);
-    font-size: 1.3rem;
-    padding-left: 5px;
+    border: 1px solid black;
 }
 
 ::placeholder {
     color: var(--sub-color);
     font-size: 1.2rem;
+    padding-left: .5rem;
 }
 
-#sumbitInfo div {
-    display: flex;
-    justify-content: center;
-    
+form textarea {
+    margin-top: 1rem;
+    width: 100%;
+    color: var(--sub-color);
+    font-size: 1.2rem;
+    border: 1px solid black;
 }
 
 #submitInfo button {
-    height: 40px;
-    width: 150px;
+    height: 50px;
+    width: 130px;
     margin-top: 20px;
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 500;
-    background: var(--main-color);
     border-style: none;
     background: var(--accent3-color);
     color: var(--sub2-color);
-    border: 2px solid #fff;
 }
-
-
 
 /***** Footer *****/
 footer {
@@ -407,27 +354,8 @@ footer {
 footer p {
     font-size: 2rem;
 }
-/* Animations */
 
-@keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-} 
-
-@keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-} 
+/******** Animations *********/
 
 .grow { 
     transition: all .2s ease-in-out; 
@@ -437,72 +365,4 @@ footer p {
         transform: scale(1.1); 
         }   
 
-/****** Media Queries ******/
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 480px) {
-        * {
-            font-size: 5.5px;
-        }
-
-        main {
-            margin-top: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-        }
-
-         main h1 {
-            font-size: 5rem;
-        }
-
-        main h1 > span {
-            font-size: 5rem;
-        }
-
-        main > div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .flexDiv {
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        main button {
-          display: none;
-        }
-
-        
-
-        .flexDiv {
-            width: 100%;
-        }
-
-        .flexDiv ul {
-            width: 100%;
-        }
-       
-        #myProjects img {
-            height: 150px;
-            width: 250px;
-        }
-
-        .projectInfo {
-            height: 75px;
-            width: 250px;
-        }
-
-        #myProjects article {
-            margin: 30px;
-        }
-    }
-    
+     
