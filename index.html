@@ -12,15 +12,20 @@
 <body>
     <header>
       <nav>
-        <span id="myLogo">DH</span>
+        <a href="davidhenry.dev" id="myLogo">DH</a>
         <ul>
-            <!-- <li><a href="https://davidhenry.dev">Home</a></li> -->
             <li><a href="#">About</a></li>
             <li><a href="#" id="goToWork">Work</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        <ul>
+            <li><i class="fa-solid fa-user"></i></li>
+            <li><i class="fa-solid fa-briefcase"></i></li>
+            <li><i class="fa-solid fa-address-card"></i></li>
+        </ul>
       </nav>
     </header>
+    <!----------- Main section ----------->
     <main>
         <div class = "container hero">
         <h1>Hey there, I'm <span>David</span>.</h1>
@@ -46,16 +51,17 @@
     </main>
 
     <!----------- About me --------------->
-    <section id ="aboutMe">
+    <section class =" aboutMe">
         <div class ="container">
+            <div>
+                <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1649089859/myPortfolio/s16qtiY_jcqea4.jpg" alt="picOfDavidHenry">
+            </div>
       <div>
         <h2>Lorem ipsum dolor sit amet.</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt dolor quo aperiam itaque distinctio. Qui placeat 
             numquam sed iusto, distinctio maiores nihil aperiam commodi, magnam nisi eligendi cupiditate excepturi eius, quod ipsum. Eaque, a optio?</p>
       </div>
-      <div>
-        <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1649089859/myPortfolio/s16qtiY_jcqea4.jpg" alt="picOfDavidHenry">
-    </div>
+     
 </div>
     </section>
     
@@ -65,6 +71,7 @@
         <h2>Work <span>&</span> Projects</h2>
           <div class="projectInfo">
              <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194931/myPortfolio/placeholder1_brg3sf.png" alt="">
+             <div>
             <h3>Project 1</h3>
             <ul>
                 <li><i class="fa-brands fa-html5"></i></li>
@@ -74,8 +81,10 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci odio repudiandae repellat eveniet, velit consequuntur facilis illum nemo eos perferendis debitis vel fugiat aspernatur voluptas consectetur minima? Tenetur, odio.</p>
             <button>View Code</button>
         </div>
+        </div>
         <div class="projectInfo">
             <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194930/myPortfolio/placeholder4_oroxak.png" alt="">
+            <div>
             <h3>Project 2</h3>
             <ul>
                 <li><i class="fa-brands fa-html5"></i></li>
@@ -84,10 +93,12 @@
             </ul>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci odio repudiandae repellat eveniet, velit consequuntur facilis illum nemo eos perferendis debitis vel fugiat aspernatur voluptas consectetur minima? Tenetur, odio.
             </p>
-            <button>View Code</button>    
+            <button>View Code</button>
+        </div>    
         </div>
         <div class="projectInfo">
             <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194930/myPortfolio/placeholder4_oroxak.png" alt="">
+            <div>
             <h3>Project 3</h3>
             <ul>
                 <li><i class="fa-brands fa-html5"></i></li>
@@ -96,6 +107,7 @@
             </ul>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci odio repudiandae repellat eveniet, velit consequuntur facilis illum nemo eos perferendis debitis vel fugiat aspernatur voluptas consectetur minima? Tenetur, odio.</p>
             <button>View Code</button>
+        </div>
         </div>
         <div class="projectInfo">
             <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194929/myPortfolio/placeholder3_trqrvs.png" alt="">
@@ -116,7 +128,7 @@
 <section id="contactInfo">
     <div class="container">
     <h2>Let's touch base.</h2>
-    <p>Ready to start working together or have a question? Shoot me a message and I'll get back to as soon as possible
+    <p>Ready to start working together or have a question? Shoot me a message and I'll get back to you as soon as possible
     </p>
    <form name="contact" method="POST" data-netlify="true">
        <input type="text" name ="name" placeholder="Name">
