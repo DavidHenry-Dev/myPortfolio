@@ -1,11 +1,8 @@
-const grabWork = document.getElementById('goToWork')
-grabWork.addEventListener("click", scrollTo)
+document.querySelector(".fa-user").addEventListener('click', scrollTo)
+document.querySelector(".fa-user").addEventListener('click', scrollTo)
+document.querySelector(".fa-user").addEventListener('click', scrollTo)
 
 
-function scrollTo(){
-    let goTo = document.getElementById('myProjects')
-    goTo.scrollIntoView(true);
+function scrollTo() {
+    document.querySelector('.aboutMe').scrollIntoView({ behavior: "smooth"})
 }
-
-
-

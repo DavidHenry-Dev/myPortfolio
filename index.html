@@ -13,12 +13,12 @@
     <header>
       <nav>
         <a href="davidhenry.dev" id="myLogo">DH</a>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#" id="goToWork">Work</a></li>
-            <li><a href="#">Contact</a></li>
+        <ul class ="displayDesktop">
+            <li><a href="#" class="link">About</a></li>
+            <li><a href="#" class="link">Work</a></li>
+            <li><a href="#" class="link">Contact</a></li>
         </ul>
-        <ul>
+        <ul class ="displayMobile">
             <li><i class="fa-solid fa-user"></i></li>
             <li><i class="fa-solid fa-briefcase"></i></li>
             <li><i class="fa-solid fa-address-card"></i></li>
@@ -26,7 +26,7 @@
       </nav>
     </header>
     <!----------- Main section ----------->
-    <main>
+    <main class="top">
         <div class = "container hero">
         <h1>Hey there, I'm <span>David</span>.</h1>
         <div>
@@ -36,7 +36,7 @@
         <div class="socialLinks">
         <ul>
         <li>
-            <a href="https://github.com/DavidHenry-Dev"><i class="fa-brands fa-github-alt grow"></i></a>
+            <a href="https://github.com/DavidHenry-Dev"><i class="fa-brands fa-github grow"></i></a>
         </li>
         <li>
             <a href=""><i class="fa-brands fa-linkedin grow"></i></a>
@@ -46,12 +46,11 @@
         </li>
         </ul>
        </div> 
-       <div><i class="fa-solid fa-angle-down"></i></div>
     </div>
     </main>
 
     <!----------- About me --------------->
-    <section class =" aboutMe">
+    <section class ="aboutMe bottom">
         <div class ="container">
             <div>
                 <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1649089859/myPortfolio/s16qtiY_jcqea4.jpg" alt="picOfDavidHenry">
@@ -78,7 +77,7 @@
                 <li><i class="fa-brands fa-css3-alt"></i></li>
                 <li><i class="fa-brands fa-js"></i></li>
             </ul>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci odio repudiandae repellat eveniet, velit consequuntur facilis illum nemo eos perferendis debitis vel fugiat aspernatur voluptas consectetur minima? Tenetur, odio.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci odio repudiandae repellat eveniet, velit consequuntur facilis.</p>
             <button>View Code</button>
         </div>
         </div>
@@ -111,6 +110,7 @@
         </div>
         <div class="projectInfo">
             <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194929/myPortfolio/placeholder3_trqrvs.png" alt="">
+            <div>
             <h3>Project 4</h3>
             <ul>
                 <li><i class="fa-brands fa-html5"></i></li>
@@ -141,7 +141,22 @@
 </div>
 </section>
 <!-- Footer -->
-<footer><p>© 2022 David Henry</p></footer>
+<footer><p>© 2022 David Henry</p>
+    <div class="socialLinks">
+        <ul>
+        <li>
+            <a href="https://github.com/DavidHenry-Dev"><i class="fa-brands fa-github grow"></i></a>
+        </li>
+        <li>
+            <a href=""><i class="fa-brands fa-linkedin grow"></i></a>
+        </li>
+        <li>
+            <a href=""><i class="fa-brands fa-twitter grow"></i></a>
+        </li>
+        </ul>
+       </div> 
+    </div>
+</footer>
 
 <script src="/js/script.js"></script>
 </body>
