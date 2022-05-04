@@ -12,21 +12,21 @@
 <body>
     <header>
       <nav>
-        <a href="davidhenry.dev" id="myLogo">DH</a>
+        <a href="https://davidhenry.dev" id="myLogo">DH</a>
         <ul class ="displayDesktop">
-            <li><a href="#" class="link">About</a></li>
-            <li><a href="#" class="link">Work</a></li>
-            <li><a href="#" class="link">Contact</a></li>
+            <li class="link listen about">About</li>
+            <li class="link listen work">Work</li>
+            <li class="link listen contact">Contact</li>
         </ul>
         <ul class ="displayMobile">
-            <li><i class="fa-solid fa-user"></i></li>
-            <li><i class="fa-solid fa-briefcase"></i></li>
-            <li><i class="fa-solid fa-address-card"></i></li>
+            <li><i class="fa-solid fa-user about listen"></i></li>
+            <li><i class="fa-solid fa-briefcase work listen"></i></li>
+            <li><i class="fa-solid fa-address-card contact listen"></i></li>
         </ul>
       </nav>
     </header>
     <!----------- Main section ----------->
-    <main class="top">
+    <main class>
         <div class = "container hero">
         <h1>Hey there, I'm <span>David</span>.</h1>
         <div>
@@ -50,7 +50,7 @@
     </main>
 
     <!----------- About me --------------->
-    <section class ="aboutMe bottom">
+    <section class ="aboutMe">
         <div class ="container">
             <div>
                 <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1649089859/myPortfolio/s16qtiY_jcqea4.jpg" alt="picOfDavidHenry">
@@ -67,7 +67,7 @@
     <!-------- Recent Projects ------------->
     <section id="myProjects">
         <div class="container">
-        <h2>Work <span>&</span> Projects</h2>
+        <h2>Work <span>/</span> Projects</h2>
           <div class="projectInfo">
              <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194931/myPortfolio/placeholder1_brg3sf.png" alt="">
              <div>
@@ -78,7 +78,7 @@
                 <li><i class="fa-brands fa-js"></i></li>
             </ul>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci odio repudiandae repellat eveniet, velit consequuntur facilis.</p>
-            <button>View Code</button>
+            <button class="viewCodeBtn">View Code</button>
         </div>
         </div>
         <div class="projectInfo">
@@ -92,7 +92,7 @@
             </ul>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci odio repudiandae repellat eveniet, velit consequuntur facilis illum nemo eos perferendis debitis vel fugiat aspernatur voluptas consectetur minima? Tenetur, odio.
             </p>
-            <button>View Code</button>
+            <button class="viewCodeBtn">View Code</button>
         </div>    
         </div>
         <div class="projectInfo">
@@ -105,10 +105,10 @@
                 <li><i class="fa-brands fa-js"></i></li>
             </ul>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci odio repudiandae repellat eveniet, velit consequuntur facilis illum nemo eos perferendis debitis vel fugiat aspernatur voluptas consectetur minima? Tenetur, odio.</p>
-            <button>View Code</button>
+            <button class="viewCodeBtn">View Code</button>
         </div>
         </div>
-        <div class="projectInfo">
+        <!-- <div class="projectInfo">
             <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194929/myPortfolio/placeholder3_trqrvs.png" alt="">
             <div>
             <h3>Project 4</h3>
@@ -121,7 +121,7 @@
             <button>View Code</button>
                
         </div>
-    </div>
+    </div> -->
     </section>
  
 <!---------- Contact Info ------------->
