@@ -19,6 +19,11 @@
     --accent-color: #ff8906;
     --accent2-color: #2a2a2a;
     --accent3-color: #e53170;
+} 
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -32,6 +37,7 @@ body {
     background: var(--main-color);
     color: var(--sub2-color);
     font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
 }
 .container {
     padding: 0 1rem;
@@ -78,8 +84,8 @@ nav ul {
 }
 
 
-nav li{
-    padding: 0 1rem;
+nav li a{
+    margin: 0 1.2rem;
     font-size: 1.4rem;
     color: var(--accent2-color);
 }
@@ -88,7 +94,7 @@ nav li{
     position: relative;
   }
 
-.link:after{
+.link a:after{
     content: '';
     position: absolute;
     width: 0; height: 3px;
@@ -100,7 +106,7 @@ nav li{
     -webkit-transition: width .2s ease;
   }
 
-.link:hover:after{
+.link a:hover:after{
     width: 100%;
     left: 0;
     background: var(--accent-color);
@@ -198,13 +204,6 @@ main {
     font-size: 3rem;
 }
 
-/* .top {
-    clip-path: polygon(0 0,100% 0,100% calc(100% - 45px),50% 100%,0 calc(100% - 45px));
-  }
-.bottom {
-    clip-path: polygon(0 0,50% 45px,100% 0,100% 100%,0 100%);
-    margin-top: -39px;
-  } */
 
 /****** ABOUT ME SECTION *******/
 
@@ -239,16 +238,16 @@ main {
 }
 
 .aboutMe img {
-    height:25rem;
+    height:15rem;
     width: 15rem;
     margin: 0;
     border-radius: 5px;
-    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    /* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5)); */
 }
 
 /***** Projects and work section  *****/
 
-#myProjects {
+.myProjects {
  padding:5rem 0 0;
  display: flex;
  justify-content: space-evenly;
@@ -258,13 +257,13 @@ main {
  color: var(--sub-color);
 }
 
-#myProjects h2 {
+.myProjects h2 {
  text-align: center;
  font-size: 3rem;
  color: var(--sub-color);
 }
 
-#myProjects h2 span {
+.myProjects h2 span {
     font-size: 3rem;
     color: var(--accent-color);
 }
@@ -311,16 +310,16 @@ main {
     line-height: 1.3;
 }
 
-#myProjects ul {
+.myProjects ul {
     display: flex;
     justify-content: center;
 }
 
-#myProjects li {
+.myProjects li {
     margin: 0;
 }
 
-#myProjects ul i {
+.myProjects ul i {
     font-size: 2.6rem;
     padding: 0 1.2rem 0 1.2rem;
 }
@@ -352,7 +351,7 @@ main {
 }
 /****** contact info section ******/
 
-#contactInfo {
+.contactInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -362,16 +361,16 @@ main {
     color: var(--sub-color);
 }
 
-#contactInfo .container > * {
+.contactInfo .container > * {
     margin: 1.5rem auto;
 }
 
-#contactInfo h2{
+.contactInfo h2{
     font-size: 3rem;
     text-align: center;
 }
 
-#contactInfo p {
+.contactInfo p {
     margin: 0 auto;
     font-size: 1.6rem;
     text-align: center;
@@ -445,6 +444,37 @@ footer p {
 .grow:hover { 
         transform: scale(1.1); 
         } 
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.from-left {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.from-right {
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
 
 /************** MEDIA QUERIES ****************/
 

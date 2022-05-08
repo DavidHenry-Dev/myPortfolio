@@ -1,13 +1,32 @@
-// document.querySelector(".about").addEventListener('click', scrollTo)
-// document.querySelector(".work").addEventListener('click', scrollTo)
-// document.querySelector(".contact").addEventListener('click', scrollTo)
+const sliders = document.querySelectorAll(".slide-in")
+const faders = document.querySelectorAll(".fade-in")
 
-document.querySelectorAll(".listen").forEach((item) => {
-    item.addEventListener('click', scrollTo )
+
+  const appearOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -150px 0px"
+  };
+  
+  const appearOnScroll = new IntersectionObserver(function(
+    entries,
+    appearOnScroll
+  ) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
+      } else {
+        entry.target.classList.add("appear");
+        appearOnScroll.unobserve(entry.target);
+      }
+    });
+  },
+  appearOptions);
+  
+
+sliders.forEach(slider => {
+    appearOnScroll.observe(slider)
 })
 
-function scrollTo() {
-    if (document.querySelector('.work') ){
-    document.querySelector('#myProjects').scrollIntoView({ behavior: "smooth"})
-    } 
-}
+faders.forEach(fader => {
+    appearOnScroll.observe(fader)
+})

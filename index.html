@@ -14,20 +14,20 @@
       <nav>
         <a href="https://davidhenry.dev" id="myLogo">DH</a>
         <ul class ="displayDesktop">
-            <li class="link listen about">About</li>
-            <li class="link listen work">Work</li>
-            <li class="link listen contact">Contact</li>
+            <li class="link"><a href="#about">About</a></li>
+            <li class="link"><a href="#work">Work</a></li>
+            <li class="link"><a href="#contact">Contact</a></li>
         </ul>
         <ul class ="displayMobile">
-            <li><i class="fa-solid fa-user about listen"></i></li>
-            <li><i class="fa-solid fa-briefcase work listen"></i></li>
-            <li><i class="fa-solid fa-address-card contact listen"></i></li>
+            <li><a href="#about"><i class="fa-solid fa-user about listen"></i></a></li>
+            <li><a href="#work"><i class="fa-solid fa-briefcase work listen"></i></a></li>
+            <li><a href="#contact"><i class="fa-solid fa-address-card contact listen"></i></a></li>
         </ul>
       </nav>
     </header>
     <!----------- Main section ----------->
     <main class>
-        <div class = "container hero">
+        <div class ="container hero">
         <h1>Hey there, I'm <span>David</span>.</h1>
         <div>
         <p>A <span>software engineer</span> & full stack web developer</span></p>
@@ -50,10 +50,10 @@
     </main>
 
     <!----------- About me --------------->
-    <section class ="aboutMe">
+    <section class ="aboutMe" id ="about">
         <div class ="container">
             <div>
-                <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1649089859/myPortfolio/s16qtiY_jcqea4.jpg" alt="picOfDavidHenry">
+                <img src="https://res.cloudinary.com/djlowrayn/image/upload/ar_1:1,b_rgb:2a2a2a,bo_5px_solid_rgb:ff8906,c_fill,g_auto,r_max,w_1000/v1652039659/myPortfolio/DavidHenry_qqa9ud.jpg" alt="picOfDavidHenry">
             </div>
       <div>
         <h2>Lorem ipsum dolor sit amet.</h2>
@@ -65,10 +65,10 @@
     </section>
     
     <!-------- Recent Projects ------------->
-    <section id="myProjects">
+    <section class="myProjects" id="work">
         <div class="container">
         <h2>Work <span>/</span> Projects</h2>
-          <div class="projectInfo">
+          <div class="projectInfo from-right slide-in">
              <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194931/myPortfolio/placeholder1_brg3sf.png" alt="">
              <div>
             <h3>Project 1</h3>
@@ -81,7 +81,7 @@
             <button class="viewCodeBtn">View Code</button>
         </div>
         </div>
-        <div class="projectInfo">
+        <div class="projectInfo from-left slide-in fade-in">
             <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194930/myPortfolio/placeholder4_oroxak.png" alt="">
             <div>
             <h3>Project 2</h3>
@@ -95,7 +95,7 @@
             <button class="viewCodeBtn">View Code</button>
         </div>    
         </div>
-        <div class="projectInfo">
+        <div class="projectInfo from-right slide-in fade-in">
             <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194930/myPortfolio/placeholder4_oroxak.png" alt="">
             <div>
             <h3>Project 3</h3>
@@ -125,7 +125,7 @@
     </section>
  
 <!---------- Contact Info ------------->
-<section id="contactInfo">
+<section class="contactInfo" id="contact">
     <div class="container">
     <h2>Let's touch base.</h2>
     <p>Ready to start working together or have a question? Shoot me a message and I'll get back to you as soon as possible
