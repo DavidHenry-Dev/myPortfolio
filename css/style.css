@@ -165,13 +165,13 @@ main {
 
 .hero p {
     font-size: 2.4rem;
-    color: var(--accent2-color);
+    color: #535353;
     line-height: 1.5;
 }
 
 .hero p span {
     font-size: 2.4rem;
-    color: var(--sub-color);
+    color: #535353;
     border-bottom: 2px solid var(--accent3-color);
 }
 
@@ -218,7 +218,7 @@ main {
 
 .aboutMe .container > * {
     margin: 3rem auto;
-    padding: 0 5rem 0 5rem;
+    /* padding: 0 1rem 0 1rem; */
 }
 
 .aboutMe .container div > * {
