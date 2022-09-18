@@ -6,32 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">      
     <link rel="stylesheet" href="css/style.css">
     <title>DavidHenry.Dev</title>
 </head>
 <body>
     <header>
-      <nav>
-        <a href="https://davidhenry.dev"><img src="/dhlogo1.png" id="myLogo" alt=""></a>
-        <ul class ="displayDesktop">
-            <li class="link"><a href="#about">About</a></li>
-            <li class="link"><a href="#skills">Skills</a></li>
-            <li class="link"><a href="#Services">Services</a></li>
-            <li class="link"><a href="#work">Work</a></li>
-            <li class="link"><a href="#contact">Contact</a></li>
-        </ul>
-        <ul class ="displayMobile">
-            <li><a href="#about"><i class="fa-solid fa-user about listen"></i></a></li>
-            <li><a href="#work"><i class="fa-solid fa-briefcase work listen"></i></a></li>
-            <li><a href="#contact"><i class="fa-solid fa-address-card contact listen"></i></a></li>
-        </ul>
+      <nav class="container">
+                <img src="/dhlogo1.png" id="myLogo" alt="">
+                <div class="nav-toggle">
+                    <!-- <i class="fa-solid fa-bars fa-2xl"></i> -->
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            
+                <ul class ="nav-menu">
+                    <li class="link"><a href="#about">About</a></li>
+                    <li class="link"><a href="#skills">Skills/Services</a></li>
+                    <li class="link"><a href="#work">Work</a></li>
+                    <li class="link"><a href="#contact">Contact</a></li>
+                </ul>
       </nav>
     </header>
     <!----------- Main section ----------->
     <main class>
         <div class ="container hero">
-        <h1>Hey there, I'm <span>David</span>.<p>A <span>Full-Stack Software Engineer</span></p>
-            <p>and your next web developer.</span></p></h1>
+        <h1>Hey there, I'm <span>David</span>.</h1>
+        <p>A <span>Full-Stack</span> Software Engineer</p>
+            <p>and your next web developer.</span></p>
         
         <div class="socialLinks">
         <ul>
@@ -57,9 +60,51 @@
             </div>
       <div>
         <h2>About Me</h2>
-        <p>Hello, I'm David. A friendly and intuitive Software Engineer based in sunny West Palm Beach, FL. I help businesses reach their potential by bulding/and or revamping their websites, bringing them the online presence they deserve with my skills, knowledge, and creativity in all things web development. </p> 
+        <p>Hello, I'm David. A friendly and intuitive Software Engineer based in sunny West Palm Beach, FL. Using my skills, knowledge, and creativity in all things web development, I help businesses reach their potential by building and/or revamping their websites bringing them the online presence they deserve. </p> 
         <p> Whether it's in my professional or personal life, I'm at my absolute best when researching, creating and implementing creative solutions to the challenges I face. </p>
       </div>
+     
+</div>
+    </section>
+
+    <!----------- SKILLS & SERVICES--------------->
+    <section class ="skills-services" id ="skills">
+        <div class ="container">
+            <h2>What I do</h2>
+            <ul class="devIcons">
+                <li>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </li>
+                <li>
+                    <i class="devicon-react-original-wordmark colored"></i>
+                  </li>
+                <li>
+                    <i class="devicon-nodejs-plain colored"></i>
+                </li>
+                <li><i class="devicon-express-original"></i>
+                </li>
+                <li>
+                    <i class="devicon-tailwindcss-plain colored"></i>
+                  </li>
+                  <li>
+                      <i class="devicon-bootstrap-plain-wordmark colored"></i>
+                    </li>
+                <li>
+                    <i class="devicon-html5-plain-wordmark colored"></i>
+                  </li>
+                <li>
+                    <i class="devicon-css3-plain-wordmark colored"></i>
+                  </li>
+                  <li>
+            <i class="devicon-git-plain-wordmark colored"></i>
+                  </li>
+            </ul>
+            <div class="servicesGrid">
+                <div class="div1"><h3><i class="fa-solid fa-laptop-code"></i>Web Development</h3><p>Reach more customers and get more business by putting your presence on the web. I provide full-service, responsive web development and design that's approachable and easy for your customers to use. In today's modern world, a website is your customer's first point of contact with you and is the most essential.</p></div>
+                <div class="div2"><h3> <i class="fa-solid fa-layer-group"></i>MERN Stack</h3><p>I develope fully responsive, full-stack websites using HTML5/CSS3, JavaScript, and the MERN stack. </p></div>
+                <div class="div3"><h3><i class="fa-solid fa-screwdriver-wrench"></i>UI/UX</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, aut! Animi quis, eius dolore reprehenderit voluptate laborum accusamus praesentium aut.</p></div>
+                <div class="div4"><h3><i class="fa-solid fa-laptop-code"></i>Services</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, aut! Animi quis, eius dolore reprehenderit voluptate laborum accusamus praesentium aut.</p></div>
+            </div>
      
 </div>
     </section>
@@ -108,20 +153,6 @@
             <button class="viewCodeBtn">View Code</button>
         </div>
         </div>
-        <!-- <div class="projectInfo">
-            <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1647194929/myPortfolio/placeholder3_trqrvs.png" alt="">
-            <div>
-            <h3>Project 4</h3>
-            <ul>
-                <li><i class="fa-brands fa-html5"></i></li>
-                <li><i class="fa-brands fa-css3-alt"></i></li>
-                <li><i class="fa-brands fa-js"></i></li>
-            </ul>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci odio repudiandae repellat eveniet, velit consequuntur facilis illum nemo eos perferendis debitis vel fugiat aspernatur voluptas consectetur minima? Tenetur, odio.</p>
-            <button>View Code</button>
-               
-        </div>
-    </div> -->
     </section>
  
 <!---------- Contact Info ------------->
