@@ -258,7 +258,11 @@ ABOUT ME SECTION
 }
 
 .skills-services * {
-  margin: 2rem auto;
+  margin: 1rem auto;
+}
+
+.skills-services .container {
+    margin-top: 6rem;
 }
 
 .skills-services .container > * {
