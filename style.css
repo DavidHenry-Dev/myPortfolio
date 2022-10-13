@@ -9,7 +9,8 @@ GLOBAL STYLING
   --sub2-color: #e1dfe4;
   --accent-color: #ff8906;
   --accent2-color: #2a2a2a;
-  --accent3-color: #d44864;
+  --accent3-color: #be475f;
+  /* --accent3-color: #d44864; */
 }
 
 html {
@@ -80,7 +81,6 @@ nav {
 }
 .nav-menu li {
   padding: 1rem 0;
-  width: 100%;
 }
 .nav-menu li a {
   font-size: 1.8rem;
@@ -266,7 +266,7 @@ ABOUT ME SECTION
 }
 
 .skills-services .container > * {
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 .skills-services .container div > * {
@@ -358,6 +358,10 @@ ABOUT ME SECTION
   color: var(--accent2-color);
 }
 
+.description {
+  width: 80%;
+}
+
 .projectInfo > * {
   margin: 1rem auto;
 }
@@ -374,7 +378,7 @@ ABOUT ME SECTION
 
 .projectInfo img {
   height: 20rem;
-  width: 30rem;
+  width: 34rem;
   border: 3px solid var(--sub2-color);
 }
 
@@ -421,13 +425,17 @@ ABOUT ME SECTION
 }
 
 .viewCodeBtn {
-  width: 100px;
-  height: 40px;
+  width: 8rem;
+  height: 3rem;
   background: var(--accent3-color);
-  color: var(--sub2-color);
-  border: 1.5px solid var(--accent3-color);
+  color: var(--main-color);
+  border: none;
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 1.4rem;
+}
+
+.viewCodeBtn:hover {
+  opacity: 80%;
 }
 
 .viewCodeBtn:hover {
@@ -662,11 +670,15 @@ footer p {
     html {
       font-size: 19px;
     }
+
+    .description {
+      width: 60rem;
+    }
   }
 
   @media screen and (min-width: 2500px) {
     html {
-      font-size: 30px;
+      font-size: 22px;
     }
   }
 }
