@@ -9,8 +9,7 @@ GLOBAL STYLING
   --sub2-color: #e1dfe4;
   --accent-color: #ff8906;
   --accent2-color: #2a2a2a;
-  --accent3-color: #be475f;
-  /* --accent3-color: #d44864; */
+  --accent3-color: #d44864;
 }
 
 html {
@@ -40,6 +39,16 @@ li,
 a {
   text-decoration: none;
   list-style: none;
+}
+
+#styleBtn {
+  width: 8rem;
+  height: 3rem;
+  background: var(--accent2-color);
+  color: var(--main-color);
+  border: none;
+  border-radius: 3px;
+  font-size: 1.2rem;
 }
 
 /************************ 
@@ -323,7 +332,7 @@ ABOUT ME SECTION
 
 .servicesGrid h3 {
   font-size: 2rem;
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
 }
 
 /***** Projects and work section  *****/
@@ -424,15 +433,15 @@ ABOUT ME SECTION
   color: #e34f26;
 }
 
-.viewCodeBtn {
+/* .viewCodeBtn {
   width: 8rem;
   height: 3rem;
   background: var(--accent3-color);
   color: var(--main-color);
   border: none;
   border-radius: 3px;
-  font-size: 1.4rem;
-}
+  font-size: 1.2rem;
+} */
 
 .viewCodeBtn:hover {
   opacity: 80%;
@@ -487,26 +496,31 @@ form input {
 ::placeholder {
   color: var(--sub-color);
   font-size: 1.2rem;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 
 form textarea {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 2rem;
   width: 100%;
   color: var(--sub-color);
   font-size: 1.2rem;
   border: 1px solid black;
 }
 
-#submitInfo button {
-  height: 50px;
-  width: 130px;
+/* #submitInfo button {
+  width: 8rem;
+  height: 3rem;
   margin-top: 20px;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 500;
   border-style: none;
   background: var(--accent3-color);
   color: var(--sub2-color);
+} */
+
+#submitInfo button:hover {
+  cursor: pointer;
+  opacity: 80%;
 }
 
 /********** Footer **********/
@@ -574,6 +588,13 @@ footer p {
   html {
     font-size: 13px;
   }
+}
+
+@media screen and (min-width: 1020px) {
+  html {
+    font-size: 16px;
+  }
+
   .nav-menu {
     position: static;
     display: flex;
@@ -584,9 +605,9 @@ footer p {
     width: 40%;
     margin: 0;
   }
-  .nav-menu li {
-    padding: 1rem;
-  }
+  /* .nav-menu li {
+    padding: 0 4px;
+  } */
   .nav-menu li a {
     font-size: 1.4rem;
   }
@@ -618,12 +639,6 @@ footer p {
     left: 0;
     background: var(--accent-color);
     cursor: pointer;
-  }
-}
-
-@media screen and (min-width: 1020px) {
-  html {
-    font-size: 16px;
   }
 
   .aboutMe > .container {
@@ -665,20 +680,24 @@ footer p {
   .div4 {
     grid-area: 2 / 2 / 3 / 3;
   }
-
-  @media screen and (min-width: 1435px) {
-    html {
-      font-size: 19px;
-    }
-
-    .description {
-      width: 60rem;
-    }
+}
+@media screen and (min-width: 1435px) {
+  html {
+    font-size: 16px;
   }
 
-  @media screen and (min-width: 2500px) {
-    html {
-      font-size: 22px;
-    }
+  .description {
+    width: 60rem;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 20px;
+  }
+
+  .projectInfo img {
+    width: 50rem;
+    height: 35rem;
   }
 }
