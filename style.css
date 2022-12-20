@@ -50,6 +50,14 @@ a {
   border-radius: 3px;
   font-size: 1.2rem;
 }
+#styleBtn a {
+  font-size:1.2rem;
+}
+
+#styleBtn a:visited {
+  color: inherit;
+  font-size:1.2rem;
+}
 
 /************************ 
 
@@ -386,8 +394,8 @@ ABOUT ME SECTION
 }
 
 .projectInfo img {
-  height: 20rem;
-  width: 34rem;
+  height: 18rem;
+  width: 32rem;
   border: 3px solid var(--sub2-color);
 }
 
@@ -432,16 +440,6 @@ ABOUT ME SECTION
 .fa-html5 {
   color: #e34f26;
 }
-
-/* .viewCodeBtn {
-  width: 8rem;
-  height: 3rem;
-  background: var(--accent3-color);
-  color: var(--main-color);
-  border: none;
-  border-radius: 3px;
-  font-size: 1.2rem;
-} */
 
 .viewCodeBtn:hover {
   opacity: 80%;
