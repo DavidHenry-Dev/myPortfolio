@@ -75,6 +75,7 @@ header {
 }
 nav {
   min-height: 5rem;
+  width:100%;
   display: flex;
   justify-content: space-between;
   -webkit-justify-content: space-between;
