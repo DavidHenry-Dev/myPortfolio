@@ -52,6 +52,7 @@ a {
 }
 #styleBtn a {
   font-size: 1.2rem;
+  color: Var(--main-color)
 }
 
 #styleBtn a:visited {
@@ -81,6 +82,7 @@ nav {
 }
 #myLogo {
   display: flex;
+  justify-content: flex-start;
   margin: 0;
   width: 100%;
   height: 3rem;
